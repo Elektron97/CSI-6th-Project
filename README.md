@@ -20,11 +20,15 @@ Spiegazione dettagliata nel file Live Script: `Relazione_CSI.mlx` [trovi il file
 ## 3) LTR
   Lo script `LTR.m` si occupa della sintesi del controllore LTR. Esegue a sua volta lo script delle incertezze che a sua volta esegue lo script `mod_robot.m`, 
   proveniente dal libro.
+  Per valutare la Robusta prestazione e la Robusta stabilità, bisogna eseguire lo script `mu_ltr.m` (**dopo** `LTR.m`).
   
 ## 4) Risposta al gradino
   Per vedere la risposta al gradino, è necessario eseguire **dopo** `LTR.m`, `time_ltr.m`. Questo plotterà la risposta al gradino per varie realizzazioni dell'incertezza
   strutturata del sistema.
 
 ## 5) File aggiuntivi
+  Oltre questi 3 fondamentali, ci sono altri file che emulano gli scripts sulla valutazione delle prestazioni con il controllore LTR sintetizzato. Possono essere scartati o  cancellati se non interessano.
 
 ## 6) Bozze e test
+  Altri file come `unstr2.m` e in generale i file con suffisso "-2" sono bozze, in cui si considerano le realizzazioni di tutte e 2 le incertezze presenti nel sistema.
+  Come dice l'articolo, la seconda incertezza è meno determinante ed è lecito considerarla costante.
